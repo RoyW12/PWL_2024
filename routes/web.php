@@ -13,6 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/hello', function () {
+    return 'Hello World';
+   });
+
+Route::get('/world', function () {
+    return 'World';
+   });
 Route::get('/', function () {
-    return view('welcome');
-});
+    return 'Selamat Datang';
+   });
+Route::get('/about', function () {
+    return 'Roy Wijaya;2341720120';
+   });
+
+    
