@@ -41,6 +41,7 @@ Route::get('/about', [AboutController::class,'about']);
 Route::get('/articles/{id}', [ArticleController::class,'articles']);
 
 
+
 Route::get('/world', function () {
     return 'World';
    });
@@ -76,9 +77,11 @@ Route::get('/user/{name?}', function ($name='John') {
         //
        })->name('profile');
 
-       Route::get('/greeting', function () {
-        return view('blog.hello', ['name' => 'Roy']);
-        });
+    //    Route::get('/greeting', function () {
+    //     return view('blog.hello', ['name' => 'Roy']);
+    //     });
+        Route::get('/greeting', [WelcomeController::class,
+        'greeting']);
 
 
     
